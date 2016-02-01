@@ -24,7 +24,7 @@ public class RentalApp {
 			System.out.println("Select items : ");
 			System.out.println("1.Fan");
 			System.out.println("2.Vessel");
-			System.out.println("3.AirConditioner");
+			//System.out.println("3.AirConditioner");
 			itemNo = in.nextInt();
 			if(itemNo>0){
 			System.out.println("\nEnter no. of days");
