@@ -34,7 +34,7 @@ public class Employee {
 		if(type.equals("unskilled")){
 			
 			if(salary<8500){
-				throw new SalaryException(salary);
+				throw new SalaryException(salary,type);
 			}
 			else 
 				this.salary = salary;
@@ -42,7 +42,7 @@ public class Employee {
 		
 		else if(type.equals("semi-skilled")){
 			if(salary<9500){
-				throw new SalaryException(salary);
+				throw new SalaryException(salary,type);
 			}
 			else
 				this.salary = salary;
@@ -50,7 +50,7 @@ public class Employee {
 		
 		else if(type.equals("skilled")){
 			if(salary<10500){
-				throw new SalaryException(salary);
+				throw new SalaryException(salary,type);
 			}
 			else this.salary = salary;
 		}
