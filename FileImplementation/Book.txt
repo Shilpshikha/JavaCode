@@ -1,0 +1,3 @@
+12 : Complete Reference : Schildt : 450.0
+13 : Head First Java : Kathy : 950.0
+14 : Harry Potter : Rowling : 350.0
