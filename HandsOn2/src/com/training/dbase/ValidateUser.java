@@ -10,7 +10,7 @@ public class ValidateUser {
 
 	public boolean validate(User u){
 		
-		boolean b =false;
+		boolean result =false;
 		String sql = "Select * from SAPIENTUSER WHERE USERNAME = ? AND PASSWORD = ?" ;
 		try
 		{	
@@ -18,11 +18,11 @@ public class ValidateUser {
 			pst.setString(1, u.getUserName());
 			pst.setString(2, u.getPassWord());
 			ResultSet rs = pst.executeQuery();
-			b= rs.next();
+			result = rs.next();
 			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return b;
+		return result;
 	}
 }
