@@ -57,8 +57,30 @@ public class BankAccount {
 	}
 	
 	public double amountWithdrawn(double amt){
-		balance = balance - amt;
-		return balance;
+		if(amt<balance){
+			balance = balance - amt;
+			return balance;
+		}
+		else 
+		return 0.0;
 	}
 	
+	public double withdraw(double amt){
+		/*boolean flag = true;
+		int i =0;
+		while(flag){
+			i++;
+		}*/
+		
+		/*try{
+			Thread.sleep(100);
+		
+			
+		}catch(Exception e){
+			
+		}*/
+		balance = balance - amt;
+		return balance;
+	
+	}
 }
