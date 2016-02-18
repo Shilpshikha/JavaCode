@@ -15,6 +15,14 @@ public abstract class FeatureDecorator extends BankAccount {
 		super();
 		this.account = account;
 	}
+
+	public BankAccount getAccount() {
+		return account;
+	}
+
+	public void setAccount(BankAccount account) {
+		this.account = account;
+	}
 	
 
 }

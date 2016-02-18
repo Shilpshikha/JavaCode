@@ -9,7 +9,7 @@ public class Client {
 		System.out.println("Amount calculated for Personal Loan " + account1.calcAmt(25000.00) );
 		
 		LoanAccount account2 = LoanFactory.getInstance(LoanType.HOUSINGLOAN);
-		System.out.println("Amount calculated for Housing Loan " + account1.calcAmt(900000.00) );
+		System.out.println("Amount calculated for Housing Loan " + account2.calcAmt(900000.00) );
 
 	}
 
