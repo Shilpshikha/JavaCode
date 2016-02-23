@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><label>Username</label></td>
+			<td><input type = "text" id="userText" name="userName" required="required" placeholder="username"></td>
+			<td><label id="lbl1"></label></td>		
+			<!-- <span id="msg"></span>-->
+		</tr>
+				
+		<tr>
+			<td><label>Password</label></td>
+			<td><input type = "password" name="passWord" id="pass"></td>
+			<td><label id="lbl2"></label></td>	
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value = "Login"></td>
+		<tr>
+	</table>
+
+	<script>
+		var element = document.getElementById("userText");
+		var element2 = document.getElementById("pass");
+		var msg = document.getElementById("lbl1");
+		var msg2 = document.getElementById("lbl2");
+		
+		element.addEventListener('keydown', function(){
+		
+			var userName = element.value;  
+			
+		
+			if(userName.length>=8){
+				msgText = "Strong";
+				msg.style.color="green";
+			}
+			
+			if(userName.length>4 && userName.length<8){
+				msgText = "Medium";
+				msg.style.color="blue"
+			}
+		
+			if(userName.length<4){ 
+				msgText = "Weak";
+				msg.style.color="red";
+			}
+			msg.innerHTML = msgText;
+		});
+		
+		element2.addEventListener('input', function(){
+		
+			var pass = element2.value;
+			if(pass.length>=8){
+				msgText2 = "Strong";
+				msg2.style.color="green";
+			}
+			
+			if(pass.length>4 && pass.length<8){
+				msgText2 = "Medium";
+				msg2.style.color="blue"
+			}
+		
+			if(pass.length<4){ 
+				msgText2 = "Weak";
+				msg2.style.color="red";
+			}
+			
+			
+			msg2.innerHTML = msgText2;
+		});
+	</script>
+</body>
+</html>
