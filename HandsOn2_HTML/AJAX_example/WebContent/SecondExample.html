@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Selector</title>
+<script type="text/javascript" src="jslibs/jquery-1.12.1.js"></script>
+	<script type="text/javascript">
+	
+		$(function(){
+			$("h1").css("color","blue");
+			$('#detail').css("font-size","1.3em");
+			$('ul>li').css('color','red');
+			$('img').on('click',function(){
+				alert('Grapes selected');
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<h1>jQuery Examples</h1>
+	<h3 id="detail">Ajax Calls</h3>
+	<ul>
+		<li>UML</li>
+		<li>OOAD</li>
+		<li>RDBMS</li>
+		<li>JAVA</li>
+		<li>ANT &amp; Log4j</li>
+	</ul>
+	<img src="images/images.jpg" alt="Grapes">
+</body>
+</html>
