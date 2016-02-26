@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+#hdcenter{
+	text-align:center;
+	color: magenta;
+}
+table{
+	margin-left : auto;
+	margin-right : auto;
+    width:60%;
+	border : 2px solid blue;
+	border-collapse : collapse;
+}
+tr,td,th{
+	text-align:center;
+	border : 2px solid blue;
+	border-collapse:collapse;
+}
