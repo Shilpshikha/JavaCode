@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+#hdcenter{
+	text-align:center;
+	color: magenta;
+}
+#frm{
+	text-align:center;
+}
+table{
+	margin-left : auto;
+	margin-right : auto;
+	width : 60%;
+	border : 2px solid blue;
+	border-collapse : collapse;
+}
+tr,td,th{
+	text-align:center;
+	border : 2px solid blue;
+	border-collapse:collapse;
+}
+input[type="text"]:hover{
+	border:2px solid black;
+}

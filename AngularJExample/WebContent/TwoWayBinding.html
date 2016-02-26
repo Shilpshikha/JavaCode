@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>One way binding</title>
+	<script type="text/javascript" src ="scripts/angular.js"></script>
+	<script type="text/javascript">
+
+	var app = angular.module("twoway",[]);
+	
+	app.controller('currController',function($scope){
+	
+		$scope.inr=0;
+		$scope.convRate=55.00;
+		$scope.result=0.0;
+	//	$scope.res=0.0;
+	//	$scope.usd=0.0
+		$scope.change=function(){
+			
+			$scope.inr=$scope.result/$scope.convRate;
+		}
+		$scope.calc=function(){
+			$scope.result=$scope.inr*$scope.convRate;
+			
+		}
+		
+	});
+	
+	</script>
+	
+</head>
+<body data-ng-app="twoway" data-ng-controller="currController" >
+	Dollar<input type="text" name="rupees" data-ng-model="inr" data-ng-change="calc()">
+	Conversion<input type="text" name="conv" data-ng-model="convRate">
+	Indian Rupees<input type="text" name="result" data-ng-model="result" data-ng-change="change()">
+	
+	
+<!-- 	Dollar<input type="text" name="dollar" data-ng-model="usd" data-ng-change="calc()">
+	Result2<input type="text" name="res" data-ng-model="res">
+-->
+</body>
+</html>

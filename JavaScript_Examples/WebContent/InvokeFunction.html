@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Invoking Functions</title>
+	<script >
+	</script>
+</head>
+<script type="text/javascript" src="scripts/JavaScriptFunctions.js"></script>
+<body>
+	<h2>Understanding Javascript functions</h2>
+	
+	<input type="button" value="Function1" id="btn1">
+	<input type="button" value="Function2" id="btn2">
+	<input type="button" value="Function3" id="btn3">
+	<input type="button" value="Function4" id="btn4">
+	<input type="button" value="Function5" id="btn5">
+	
+	<script>
+		var element = document.getElementById('btn1');
+		element.addEventListener('click', normalFunction);
+		
+		var element2 = document.getElementById('btn2');
+		element2.addEventListener('click', function(){
+			var func2 = withArgFunction('Ram');
+			func2();
+		});
+		
+		var element3 = document.getElementById('btn3');
+		element3.addEventListener('click', function(){
+			var func3 = returnFunction('Ramesh');
+			alert(func3);
+			
+		} );
+		
+		var element4 = document.getElementById('btn4');
+		element4.addEventListener('click', function(){
+			takeFunctionArg( returnFunction('Tarun'));
+			
+		});
+		
+		var element5 = document.getElementById('btn5');
+		element5.addEventListener('click', function(){
+			var funcList = returningFunctions();
+			funcList.addClass();
+			funcList.removeClass();
+		});
+		
+	</script>
+</body>
+	
+</html>
+
+	

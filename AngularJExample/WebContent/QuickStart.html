@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<script type="text/javascript" src ="scripts/angular.js"></script>
+	<script type="text/javascript">
+		
+		var app = angular.module("quick",[]);
+		
+	</script>
+</head>
+<body>
+	<div data-ng-app="quick">
+		{{"Hello"+"World  "}}
+		
+		User Name : <input type="text" data-ng-model="username">
+		Welcome  : <span data-ng-bind="username"></span>
+	</div>
+	
+	<div>
+		{{"Hello"+"World"}}
+	</div>
+</body>
+</html>

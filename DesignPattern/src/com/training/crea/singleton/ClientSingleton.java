@@ -1,0 +1,18 @@
+package com.training.crea.singleton;
+
+public class ClientSingleton {
+
+	public static void main(String[] args) {
+	
+		Counter count1 = Counter.getInstance();
+		System.out.println(count1.hashCode());
+		
+		Counter count2 = Counter.getInstance();
+		System.out.println(count2.hashCode());
+		
+		Counter count3 = Counter.getInstance();
+		System.out.println(count3.hashCode());
+
+	}
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="ISO-8859-1">
+	<title>Java Script Example</title>
+	
+	<script type="text/javascript" src="scripts/QuickStart.js"></script>
+	
+	<script type="text/javascript">
+	 alert("Hello from head");
+	 
+	 function showMessage(){
+		 alert("Show Message");
+	 }
+
+/*	//does not execute as the <input type="button"... is in body
+ * 
+
+	 var element = document.getElementById("btn1");
+	 element.addEventListener('click', function(){   
+		 <!-- anonymous function / named function can also be passed 
+		 --> 
+		 
+		 alert('hello from Event Handler');
+	 }); */
+	// element.addEventListener('click', showMessage());
+	</script>
+ </head>
+ <body>
+
+	<input type="button" id="btn1" value="Click">
+	
+
+ <!-- 	<script type="text/javascript">
+	 alert("Hello from body");
+	 showMessage();
+	 greet();
+	</script>
+ -->	
+ 
+ 	<script>
+/*	 var element = document.getElementById("btn1");
+	 element.addEventListener('click', function(){   
+		 <!-- anonymous function / named function can also be passed 
+		 -->
+		 alert('hello from Event Handler');
+	 });
+*/	 
+     
+     var element = document.getElementById("btn1");
+	// element.addEventListener('click', showMessage()); //called on its own as the page loads
+	 element.addEventListener('click', showMessage); // called when the event is triggered
+
+	</script>
+ 
+ </body>
+</html>

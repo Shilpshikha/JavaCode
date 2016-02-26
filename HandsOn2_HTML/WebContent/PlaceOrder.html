@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Place Orders</title>
+	<link type="text/css" href="styles/orderstyle.css" rel="stylesheet"/>
+
+</head>
+<body>
+	<header>
+		<div id="hdcenter">
+		 <h2>Place Order</h2>
+		</div>
+	</header>
+	<div id="frm">
+	 <form action="" method="get">
+		<table>
+			<tr>
+				<td>Customer Name</td>
+				<td><input type="text" id="cname" name="cname" required="required" placeholder="Enter Name"></td>
+			</tr>
+			<tr>
+				<td>Location</td>
+				<td>
+					<select id="drpdwn">
+						<option value ="DELHI">Delhi</option>
+						<option value ="MUMBAI">Mumbai</option>
+						<option value ="KOLKATA">Kolkata</option>
+						<option value ="CHENNAI">Chennai</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Payment Mode</td>
+				<td>
+					<input type="radio" id="rad" name="net" checked="checked" value="Net Banking">Net Banking
+					<input type="radio" id="rad" name="net" value="Visa" >Visa
+					<input type="radio" id="rad" value="Master">Master
+				</td>
+			</tr>
+			<tr>
+				<td>Choose Offers</td>
+				<td>
+					<input type="checkbox" name="offer" value="Points">Points
+					<input type="checkbox" name="offer" value="Movie Ticket">Movie Ticket
+					<input type="checkbox" name="offer" value="Coupon">Coupon
+				</td>
+			</tr>
+			<tr>
+				<td><input type="reset" name="reset"></td>
+				<td><input type="submit" id="sub" value="submit"></td>
+			</tr>
+		</table>
+	 </form>
+	</div>
+</body>
+	<script type="text/javascript" src="scripts/Script1.js"></script>
+	
+</html>

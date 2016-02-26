@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Iteration_Filter</title>
+	<script type="text/javascript" src ="scripts/angular.js"></script>
+	<script type="text/javascript">
+	
+	var item={
+			"itemName" : "Television",
+			"image" : 'images/tv.jpg',
+			"price" : 34000.00 
+	};
+	
+	var itemList=[
+	              {"id" : 101, "itemname" : 'Fridge', 'price' : 20000.00},
+	              {"id" : 405,"itemname" : 'AC', 'price' : 40000.00},
+	              {"id" : 203,"itemname" : 'Microvwave', 'price' : 10000.00}
+	              ];
+	
+	var app = angular.module("iterate",[]);
+	
+	app.controller('itemController',function($scope){
+	
+		$scope.product = item;
+		$scope.products = itemList;
+	});
+	
+	</script>
+	
+</head>
+<body> <!-- template -->
+	<div data-ng-app="iterate" data-ng-controller="itemController" style="text-align:center;" >
+	<div style="text-align:center;">
+	<div data-ng-init="name='search'">
+	<label style="font-weight : bold;">{{name}}</label>
+	</div>
+	<!-- <label>Search</label> -->
+	<input type="search" data-ng-model="criteria" name="criteria">
+		<h2>Item list</h2>
+		<table>
+			<tr data-ng-repeat="itm in products | filter:criteria| orderBy:['-price']">
+				<td>{{itm.id}}</td>
+				<td>{{itm.itemname|uppercase}}</td>
+				<td>{{itm.price}}</td>
+				<!-- <td><p data-ng-bind="item.price| number:2"></p></td> -->
+			</tr>
+		</table>
+		</div>
+	</div>
+</body>
+</html>
+

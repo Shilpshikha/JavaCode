@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>One way binding</title>
+	<script type="text/javascript" src ="scripts/angular.js"></script>
+	<script type="text/javascript">
+	
+	var item={
+			"itemName" : "Television",
+			"image" : 'images/tv.jpg',
+			"price" : 34000.00 
+	};
+	
+	var app = angular.module("oneway",[]);
+	
+	app.controller('itemController',function($scope){
+	
+		$scope.product = item;
+	});
+	
+	</script>
+	
+</head>
+<body> <!-- template -->
+	<div data-ng-app="oneway" data-ng-controller="itemController">
+		<h1 data-ng-bind="product.itemName"></h1>
+		<img alt="Product" data-ng-src="{{product.image}}"></img>
+		<p data-ng-bind="product.price"></p>
+	</div>
+</body>
+</html>
