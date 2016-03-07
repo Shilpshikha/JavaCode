@@ -1,0 +1,9 @@
+[
+	{ "code" : "T101" , "name" : "Fasting glucose" , "rate" : 240 },
+	{ "code" : "T102" , "name" : "TC,DC" , "rate" : 630  },
+	{ "code" : "T103" , "name" : "Blood Test" , "rate" : 310 },
+	{ "code" : "P101" , "name" : "Glucose" , "rate" : 180  },
+	{ "code" : "P102" , "name" : "ENT Test" , "rate" : 220  },
+	{ "code" : "P103" , "name" : "HDC Test" , "rate" : 380  }
+] 
+	
