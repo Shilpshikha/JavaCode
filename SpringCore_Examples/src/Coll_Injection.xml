@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="custBean2" class="com.training.domains.Customer" autowire="byName">
+	<property name="customerId" value="1011"></property>
+	<property name="customerName" value="Samar"></property>
+	<property name="phoneNumber" value="98362828"></property>
+</bean>
+
+<bean id="addr" class="com.training.domains.Address">
+	<constructor-arg name="addrLine1" value="Palam more"></constructor-arg>
+	<constructor-arg name="city" value="Gurgaon"></constructor-arg>
+	<constructor-arg name="pincode" value="122001"></constructor-arg>
+</bean>
+
+<bean id="invoice1" class="com.training.domains.Invoice" autowire="byType">
+	<property name="invoiceNumber" value="1002324"></property>
+	<property name="amount" value="500.00"></property>
+	<property name="lst">
+		<list>
+			<ref bean="item1"></ref>
+			<ref bean="item2"></ref>
+			<ref bean="item3"></ref>
+		</list>
+	
+	</property> 
+	<property name="taxes">
+		<map>
+			<entry>
+				<key><value>VAT</value></key>
+				<value>12.62</value>
+			</entry>
+			<entry>
+				<key><value>SVC</value></key>
+				<value>5.67</value>
+			</entry>
+		</map>
+	</property>
+</bean>
+
+<bean id="item1" class="com.training.domains.Item">
+	<property name="itemNumber" value="101"></property>
+	<property name="itemName" value="Rice"></property>
+	<property name="reatePerUnit" value="100.00"></property>
+</bean>
+
+<bean id="item2" class="com.training.domains.Item">
+	<constructor-arg index="0" value="102"></constructor-arg>
+	<constructor-arg index="1" value="Pulses"></constructor-arg>
+	<constructor-arg index="2" value="130.00"></constructor-arg>
+</bean>
+
+<bean id="item3" class="com.training.domains.Item">
+	<constructor-arg type="int" value="103"></constructor-arg>
+	<constructor-arg type="java.lang.String" value="Suger"></constructor-arg>
+	<constructor-arg type="double" value="80.00"></constructor-arg>
+</bean>
+
+
+</beans>

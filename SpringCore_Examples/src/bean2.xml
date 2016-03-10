@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="custBean2" class="com.training.domains.Customer" lazy-init="true">
+	<property name="customerId" value="1011"></property>
+	<property name="customerName" value="Samar"></property>
+	<property name="phoneNumber" value="98362828"></property>
+	<property name="addr" ref="addr"></property>
+</bean>
+
+<bean id="addr" class="com.training.domains.Address">
+	<constructor-arg name="addrLine1" value="Palam more"></constructor-arg>
+	<constructor-arg name="city" value="Gurgaon"></constructor-arg>
+	<constructor-arg name="pincode" value="122001"></constructor-arg>
+</bean>
+
+</beans>
