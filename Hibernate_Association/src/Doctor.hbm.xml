@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2016 12:10:08 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.training.entity.Doctor" table="DOCTOR_N">
+        <id name="doctorId" type="int">
+            <column name="DOCTORID" />
+            <generator class="assigned" />
+        </id>
+        <property name="doctorName" type="java.lang.String">
+            <column name="DOCTORNAME" />
+        </property>
+        <property name="handPhone" type="long">
+            <column name="HANDPHONE" />
+        </property>
+        
+        <component name="homeAddr" class="com.training.domains.Address">
+        
+        	<property name="addrLine1" column="RESIADD"></property>
+        	<property name="city" column="RESICITY"></property>
+        	<property name="pincode" column="RESIPINCODE"></property>
+        
+        </component>
+        
+         <component name="clinicAddr" class="com.training.domains.Address">
+        
+        	<property name="addrLine1" column="HOSPADD"></property>
+        	<property name="city" column="HOSPCITY"></property>
+        	<property name="pincode" column="HOSP_PINCODE"></property>
+        
+        </component>
+    
+        <many-to-one name="assistant" class="com.training.entity.ClinicalAssistant"  fetch="join" unique="true" cascade="all">
+            <column name="ASSISTANT" />
+        </many-to-one>
+        
+        <set name = "patientList"  inverse="false" lazy="true" cascade="all">
+        <key>
+        	<column name="DOCTORID"></column>
+        </key>
+        <one-to-many class="com.training.entity.Patient"/>
+        </set>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2016 12:10:08 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.training.entity.ClinicalAssistant" table="CLINICALASSISTANT">
+        <id name="assisId" type="int">
+            <column name="ASSISID" />
+            <generator class="assigned" />
+        </id>
+        <property name="assisName" type="java.lang.String">
+            <column name="ASSISNAME" />
+        </property>
+    </class>
+</hibernate-mapping>
