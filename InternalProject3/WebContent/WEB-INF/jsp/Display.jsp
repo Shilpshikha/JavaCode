@@ -10,7 +10,7 @@
 <body>
 
 <h3>Student List</h3>
-<a href="/">Home</a>
+<a href="/InternalProject3/">Home</a>
 <table border="1" cellspacing="0">
 	<tr>
 		<th><label>Student Roll</label></th>
