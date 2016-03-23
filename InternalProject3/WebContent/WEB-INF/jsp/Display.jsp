@@ -16,11 +16,12 @@
 		<th><label>Student Roll</label></th>
 		<th><label>Students Name</label></th>
 		<th><label>Student Department</label></th>
-		<th><label>Academic marks</label></th>
+	<!-- <th><label>Academic marks</label></th>
 		<th><label>Academic events</label></th>
 		<th><label>Sports events</label></th>
-		<th><label>Cultural events</label></th>
+		<th><label>Cultural events</label></th> -->
 		<th><label>Grade</label></th>
+		<th><label>Image</label></th>
 	</tr>
 
 <c:forEach items="${student}" var="student">
@@ -28,11 +29,12 @@
 		<td>${student.rollNo }</td>
 		<td>${student.name }</td>
 		<td>${student.department }</td>
-		<td>${student.academics }</td>
+	<!--  	<td>${student.academics }</td>
 		<td>${student.acadEvents }</td>
 		<td>${student.sportsEvents }</td>
-		<td>${student.culturalEvents }</td>
+		<td>${student.culturalEvents }</td> -->
 		<td>${student.grade }</td>
+		<td><img src="../resources/images/${student.image }" height="100px" width="100px"></td>
 
 </c:forEach>	
 </table>

@@ -12,6 +12,7 @@ public class Student {
 	private double acadEvents;
 	private double sportsEvents;
 	private double culturalEvents;
+	private String image;
 	
 	private double grade;
 	
@@ -22,7 +23,7 @@ public class Student {
 	
 
 	public Student(long rollNo, String name, String department, double academics, double acadEvents,
-			double sportsEvents, double culturalEvents,double grade) {
+			double sportsEvents, double culturalEvents,double grade,String image) {
 		super();
 		this.rollNo = rollNo;
 		this.name = name;
@@ -32,6 +33,7 @@ public class Student {
 		this.sportsEvents = sportsEvents;
 		this.culturalEvents = culturalEvents;
 		this.grade =grade;
+		this.image=image;
 	}
 
 
@@ -98,6 +100,17 @@ public class Student {
 	public void setGrade(double grade) {
 		this.grade = grade;
 	}
+	
+
+	public String getImage() {
+		return image;
+	}
+
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 
 	public double calculate(){
 		return academics*0.5 + acadEvents*0.2 + sportsEvents*0.2 + culturalEvents*0.1;

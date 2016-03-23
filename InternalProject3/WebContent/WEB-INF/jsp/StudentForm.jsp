@@ -39,7 +39,10 @@
 		<td><label>Cultural Events</label></td>
 			<td><form:input path="culturalEvents"/></td>
 	</tr>
-
+	<tr>
+	<td><label>Select Image</label></td>
+		<td><input name="image" type="file"></td>
+	</tr>
 	<tr>	
 		<td><input type="submit" value="Add"></td>
 	</tr>
