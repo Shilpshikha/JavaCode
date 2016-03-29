@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ConsumerService
+Bundle-SymbolicName: ConsumerService
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: consumerservice.Activator
+Bundle-Vendor: Sapient
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.osgi.framework;version="1.3.0"
+Export-Package: com.training.iface,
+ com.training.impl
+
